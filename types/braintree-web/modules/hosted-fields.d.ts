@@ -14,6 +14,24 @@ export interface HostedFieldsFieldMaskInput {
 }
 
 /**
+ * Fields used in {@link module:braintree-web/hosted-fields~field field objects}
+ */
+export interface SupportedCardBrands {
+  visa?: boolean;
+  mastercard?: boolean;
+  'american-express'?: boolean;
+  'diners-club'?: boolean;
+  discover?: boolean;
+  jcb?: boolean;
+  'union-pay'?: boolean;
+  maestro?: boolean;
+  elo?: boolean;
+  mir?: boolean;
+  hiper?: boolean;
+  hipercard?: boolean;
+}
+
+/**
  * Fields used in {@link module:braintree-web/hosted-fields~fieldOptions fields options}
  */
 export interface HostedFieldsField {
@@ -28,6 +46,7 @@ export interface HostedFieldsField {
     minlength?: number;
     prefill?: string;
     rejectUnsupportedCards?: boolean;
+    supportedCardBrands?: SupportedCardBrands;
 }
 
 /**
